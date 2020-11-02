@@ -24,9 +24,9 @@ app.use(listRoutes);
 app.use(taskRoutes);
 app.use(userRoutes);
 
-// app.get("*", (req, res) => {
-//   res.status(200).json({ message: "App started" });
-// });
+app.get("*", (req, res) => {
+  res.status(200).json({ message: "App started" });
+});
 
 app.listen(process.env.PORT, () => {
   console.log(`Server is listening on port ${process.env.PORT}`);
